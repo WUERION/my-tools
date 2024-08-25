@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Description from "../components/description.astro";
+import Container from "../components/container.astro";
+import FormComponent from "../components/formComponent.astro";
+---
+
+<Layout title="My Tools | colores">
+    <Header link="index.html" />
+    <Description title="Colors"  textHead="Aquí econtraras todos lo colores que más utilizó" />
+    <main>
+        <Container title="Ingresa el color en hexadecimal"  addClass="hidden" />
+        <FormComponent name="Crear color" client:load link="/src/scripts/colors.js" input2="hidden" input3="hidden"/>
+    </main>
+</Layout>

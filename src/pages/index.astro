@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import Description from "../components/description.astro";
+import Container from "../components/container.astro";
+import Cards from "../components/cards.astro";
+---
+<Layout title="My Tools">
+    <Header />
+    <main>
+        <Description title="Bienvenido a My Tools" textHead=" Soy un apasionado del diseño web y me encanta compartir los recursos que suelo utilizar en mis proyectos. En esta web podrás encontrar una selección de los mejores recursos que he encontrado a lo largo de los años. Como paletas de colores, fuentes, iconos, plantillas, plugins y herramientas."/>
+        <Container title="Colores" description="Aquí econtraras todos lo colores que más utilizó" link="colors.html" name="Ver mas">
+			<div slot="content" class="grid grid-cols-2 lg:grid-cols-4 w-full gap-5 p-5">
+                <Cards text="rgb(255, 0, 0) | #00ffff" addClass="bg-cyan-400" addStyle="nunito"/>
+                <Cards text="rgb(102, 51, 238 /0.2) | #6633ee" addClass="bg-[#6633ee]/20" addStyle="nunito"/>
+                <Cards text="rgb(102, 51, 238) | #6633ee" addClass="bg-[#6633ee]" addStyle="nunito"/>
+                <Cards text="rgb(167,138,245) | #a78af5" addClass="bg-[#a78af5]" addStyle="nunito"/>
+                <Cards text="rgb(255, 0, 0) | #ff0000" addClass="bg-red-400" addStyle="nunito"/>
+			</div>
+        </Container>
+        <Container title="Gradientes" description="Aquí encontraras todos los gradientes que más utilizó" link="gradients.html" name="Ver mas">
+			<div slot="content" class="grid grid-cols-2 lg:grid-cols-4 w-full gap-5 p-5">
+				<Cards text="#00ffff, 40deg, #ff0000" addStyle="40deg, #00ffff, #ff0000" idClass="redAnCyan"/>
+				<Cards text="#00ff00, 80deg, #00ffff" addStyle="80deg, #00ff00, #00ffff" idClass="greenAndCyan"/>
+			</div>
+		</Container>
+		<Container title="Fuentes" description="Aquí encotraras todas las fuentes que más utilizó">
+			<div slot="content" class="grid grid-cols-2 lg:grid-cols-4 w-full gap-5 p-5">
+				<Cards text="MuseoModerno" addText="A, a, B, b, C, c, 0, 1, 2, 3, 4, 5" addFont="MuseoModerno" addStyle="MuseoModerno"/>
+				<Cards text="Megrim" addText="A, a, B, b, C, c, 0, 1, 2, 3, 4, 5" addStyle="Megrim"/>
+				<Cards text="Edu AU VIC WA NT Hand" addText="A, a, B, b, C, c, 0, 1, 2, 3, 4, 5" addStyle="Edu AU VIC WA NT Hand"/>
+				<Cards text="Nunito" addText="A, a, B, b, C, c, 0, 1, 2, 3, 4, 5" addStyle="nunito"/>
+			</div>
+		</Container>
+		<Container>
+			<div slot="content" class="grid grid-cols-2 lg:grid-cols-4 gap-5 p-5">
+				<Cards img="googleFonts.webp" alt="googleFonts" addClass="h-auto" link="https://fonts.google.com/"></Cards>
+				<Cards img="bg.ibelick.webp" alt="bg.ibelick" addClass="h-auto" link="https://bg.ibelick.com/"></Cards>
+				<Cards img="convertio.webp" alt="bg.ibelick" addClass="h-auto" link="https://bg.ibelick.com/"></Cards>
+				<Cards img="tailwindcss.webp" alt="tailwind"  addClass="h-auto" link="https://tailwindcss.com/"></Cards>
+			</div>
+		</Container>
+    </main>
+</Layout>

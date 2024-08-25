@@ -1,0 +1,11 @@
+---
+const { text, addClass, addStyle, addText, img, alt, link} = Astro.props;
+---
+<div class="border border-black dark:border-white hover:border-white dark:hover:border-cyan-400 p-3.5 rounded">
+    <p class=`text-black dark:text-white text-center` style=`font-family:${addStyle};`>{text}</p>
+    <div class=`h-10 rounded my-2.5 text-black dark:text-white text-center text-base ${addClass}` style=`background-image:linear-gradient(${addStyle}); font-family:${addStyle};`>
+        {addText} <a href={link} target="_blank">
+            <img src={img} alt={alt}>
+        </a>
+    </div>
+</div>
